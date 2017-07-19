@@ -10,4 +10,3 @@ _下划线字符 只匹配单个字符
 
 RTrim()函数去掉列值右边的空格
 Upper()函数将文本转换成大写
-<a href="https://www.zhihu.com">知乎</a>
