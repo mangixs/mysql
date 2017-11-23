@@ -7,6 +7,13 @@ TRUNCATE TABLE table_name;  表内数据被删
 正则匹配
 % 通配符 在字符串中表示任意字符出现任意次数
 _下划线字符 只匹配单个字符
-
 RTrim()函数去掉列值右边的空格
 Upper()函数将文本转换成大写
+
+
+mysql 开启远程连接
+ 
+mysql -uusername -ppwd
+use mysql 
+update mysql.user set Host='%' where HOST='localhost' and User='root';
+flush privileges;
