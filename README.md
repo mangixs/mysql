@@ -45,3 +45,17 @@ show variables like 'log_%';
 关闭general log： set global general_log=off;
  set  global sql_log_off=on; 可以让 当前session不记录 执行的sql 语句
 
+// 经纬度排序示例
+SELECT
+    id,
+    pt,
+    city
+FROM
+    locationpoint
+ORDER BY
+    ACOS(
+        SIN(34.46 * PI() / 180) * SIN(latitude * PI() / 180) + COS(34.46 * PI() / 180) * COS(latitude * PI() / 180) * COS(
+            113.4 * PI() / 180 - longitude * PI() / 180
+        )
+    ) * 6378.14 ASC
+LIMIT 10;
