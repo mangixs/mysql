@@ -54,4 +54,4 @@ class mysqli_use{
 		mysqli_close($this->db);
 	}
 }
->?
+?>
